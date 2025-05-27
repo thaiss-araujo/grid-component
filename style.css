@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(204, 43%, 93%);
+}
+
+.container{
+    display: grid;
+    grid-template-areas:
+        "join join"
+        "subscription about"
+    ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40% 60%;
+    width: 700px;
+    height: auto;
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+
+.container div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.join{
+    grid-area: join;
+    background-color: #fff;
+    color:  hsl(218, 22%, 67%);
+    padding: 40px;
+    line-height: 25px;
+
+ 
+}
+
+.join h1{
+    font-weight: 700;
+    color: hsl(179, 62%, 43%);
+}
+
+.join span{
+    font-weight: 700;
+    color: hsl(71, 73%, 54%);
+    font-size: 18px;
+}
+
+h2{
+    font-weight: 700;
+}
+
+.subscription{
+    grid-area: subscription;
+    background-color: hsl(179, 62%, 43%);
+    color: hsl(204, 43%, 93%);
+    font-weight: 400;
+    padding: 40px;
+
+
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .big {
+    font-weight: 700;
+    font-size: 28px;
+    color: #fff;
+  }
+  
+  .small {
+    font-size: 16px;
+    color: hsl(204, 43%, 85%);
+  }
+  
+
+a{
+    text-decoration: none;
+    color: hsl(204, 43%, 93%);
+    font-weight: 700;
+}
+
+button{
+    text-decoration: none;
+    background-color: hsl(71, 73%, 54%);
+    border: none;
+    padding: 1.2rem;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color:hsl(71, 73%, 44%)
+}
+
+.about{
+    grid-area: about;
+    background-color:  hsla(179, 36%, 55%, 0.884);
+    color: hsl(204, 43%, 93%);
+    font-weight: 400;
+    padding: 40px;
+    line-height: 22px;
+
+ 
+}
+
+.list{
+    list-style: none;
+    line-height: 1.5rem;
+    color: hsl(204, 43%, 93%);
+}
+
