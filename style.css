@@ -1,65 +1,67 @@
-*{
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-body{
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     background-color: hsl(204, 43%, 93%);
 }
 
-.container{
+
+
+.container {
     display: grid;
     grid-template-areas:
         "join join"
         "subscription about"
     ;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 40% 60%;
-    width: 700px;
-    height: auto;
+    width: 43.75rem;
     font-family: "Karla", sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     overflow: hidden;
     border-radius: 10px;
 
 }
 
-.container div{
+.container div {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.join{
+.join {
     grid-area: join;
     background-color: #fff;
-    color:  hsl(218, 22%, 67%);
-    padding: 40px;
+    color: hsl(218, 22%, 67%);
+    padding: 2.5rem;
     line-height: 25px;
-
- 
 }
 
-.join h1{
+.join h1 {
     font-weight: 700;
     color: hsl(179, 62%, 43%);
 }
 
-.join span{
+.join span {
     font-weight: 700;
     color: hsl(71, 73%, 54%);
     font-size: 18px;
 }
 
-h2{
+h2 {
     font-weight: 700;
 }
 
-.subscription{
+.subscription {
     grid-area: subscription;
     background-color: hsl(179, 62%, 43%);
     color: hsl(204, 43%, 93%);
@@ -73,27 +75,27 @@ h2{
     display: flex;
     align-items: center;
     gap: 10px;
-  }
-  
-  .big {
+}
+
+.big {
     font-weight: 700;
     font-size: 28px;
     color: #fff;
-  }
-  
-  .small {
+}
+
+.small {
     font-size: 16px;
     color: hsl(204, 43%, 85%);
-  }
-  
+}
 
-a{
+
+a {
     text-decoration: none;
     color: hsl(204, 43%, 93%);
     font-weight: 700;
 }
 
-button{
+button {
     text-decoration: none;
     background-color: hsl(71, 73%, 54%);
     border: none;
@@ -103,24 +105,43 @@ button{
     cursor: pointer;
 }
 
-button:hover{
-    background-color:hsl(71, 73%, 44%)
+button:hover {
+    background-color: hsl(71, 73%, 44%)
 }
 
-.about{
+.about {
     grid-area: about;
-    background-color:  hsla(179, 36%, 55%, 0.884);
+    background-color: hsla(179, 36%, 55%, 0.884);
     color: hsl(204, 43%, 93%);
     font-weight: 400;
-    padding: 40px;
-    line-height: 22px;
+    padding: 2.5rem;
+    line-height: 1.3rem;
 
- 
+
 }
 
-.list{
+.list {
     list-style: none;
     line-height: 1.5rem;
     color: hsl(204, 43%, 93%);
 }
 
+@media (max-width:768px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    
+}
